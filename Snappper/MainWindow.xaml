@@ -1,0 +1,44 @@
+﻿<Window x:Class="Snappper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snappper"
+        mc:Ignorable="d"
+        Title="Snappper" Height="602" Width="802" AllowsTransparency="True" Background="Transparent" WindowStyle="None" BorderThickness="1" BorderBrush="Black" Icon="{StaticResource cameraIcon}">
+    <Window.Resources>
+        <ContextMenu x:Key="contextMenu" HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="120">
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Canvas HorizontalAlignment="Right" Height="17" Margin="0" VerticalAlignment="Top" Width="63" MouseDown="Canvas_MouseDown" Name="toolbar">
+            <Canvas.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Canvas.Background>
+            <Button x:Name="CaptureButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Click="CaptureButton_Click" Height="16" RenderTransformOrigin="2.912,0.803" Canvas.Left="23" BorderBrush="{x:Null}">
+                <Button.Background>
+                    <ImageBrush Stretch="None"/>
+                </Button.Background>
+                <Image Source="{StaticResource cameraGlyph}" Width="16" Height="12" Margin="0,0,0,0" RenderTransformOrigin="0.836,0.574"/>
+            </Button>
+            <Button x:Name="MenuButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="16" RenderTransformOrigin="2.912,0.803" Canvas.Left="43" BorderBrush="{x:Null}" Click="MenuButton_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="None"/>
+                </Button.Background>
+                    <Image Source="{StaticResource menuGlyph}" Width="12" Height="12" Margin="0,0,0,0" RenderTransformOrigin="0.836,0.574"/>
+                    <Button.ContextMenu>
+                        <local:HamburgerMenu x:Name="MainMenu">
+                            <Separator/>
+                            <MenuItem x:Name="MenuToFile" Header="To File" Click="MenuToX_Clicked" IsCheckable="True" IsChecked="True" />
+                            <MenuItem x:Name="MenuToClip" Header="To Clipboard" Click="MenuToX_Clicked" IsCheckable="True" IsChecked="False" />
+                            <Separator/>
+                            <MenuItem x:Name="MenuExit" Header="Exit" Click="MenuExit_Click"/>
+                        </local:HamburgerMenu>
+                    </Button.ContextMenu>
+            </Button>
+            <Label x:Name="label" Content=": : :" Canvas.Top="-4" Canvas.Left="-1" FontFamily="Microsoft Sans Serif" ToolTip="Drag window from here"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Right" Height="17" Margin="0" VerticalAlignment="Bottom" Width="17" Name="resizer" Visibility="Hidden">
+        </Canvas>
+    </Grid>
+</Window>
