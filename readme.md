@@ -9,3 +9,5 @@ A Windows WPF application written in C# to take screenshots of what you're worki
 * You can configure precise image sizes in Snappper.JSON
 
 I've been using it heavily for the past few months but it has only been tested on Windows 8.1 & Windows 10 so consider this a Beta version.
+
+To run, add snappper.json file from root folder to bin/debug folder.
