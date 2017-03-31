@@ -1,0 +1,43 @@
+	[{
+		"Title": "Dribbble 800 x 600",
+		"Clip Width": 800,
+		"Clip Height": 600,
+		"Resizable?": false,
+		"Ratio Maintained?": true
+	}, {
+		"Title": "Dribbble 400 x 300",
+		"Clip Width": 400,
+		"Clip Height": 300,
+		"Resizable?": false,
+		"Ratio Maintained?": true
+	}, {
+		"Title": "Resizable Dribbble 800 x 600",
+		"Clip Width": 800,
+		"Clip Height": 600,
+		"Resizable?": true,
+		"Ratio Maintained?": true
+	}, {
+		"Title": "Resizable Dribbble 400 x 300",
+		"Clip Width": 400,
+		"Clip Height": 300,
+		"Resizable?": true,
+		"Ratio Maintained?": true
+	}, {
+		"Title": "Facebook 470 x 470",
+		"Clip Width": 470,
+		"Clip Height": 470,
+		"Resizable?": false,
+		"Ratio Maintained?": true
+	}, {
+		"Title": "Resizable Facebook 470 x 470",
+		"Clip Width": 470,
+		"Clip Height": 470,
+		"Resizable?": true,
+		"Ratio Maintained?": true
+	}, {
+		"Title": "Freeform Resizable",
+		"Clip Width": 800,
+		"Clip Height": 600,
+		"Resizable?": true,
+		"Ratio Maintained?": false
+	}]
